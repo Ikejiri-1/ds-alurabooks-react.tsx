@@ -3,21 +3,21 @@ import styled, { css } from 'styled-components';
 
 export interface AbButtonProps {
   text?: string;
-  styleType?: 'primary' | 'secondary';
-  onCLick?: () => void;
+  styletype?: 'primary' | 'secondary';
+  onClick?: () => void;
 }
 
 const StyledButton = styled.button<AbButtonProps>`
   background: ${(props: AbButtonProps) =>
-    props.styleType === 'primary' ? '#eb9b00' : '#fff'};
+    props.styletype === 'primary' ? '#eb9b00' : '#fff'};
   color: ${(props: AbButtonProps) =>
-    props.styleType === 'primary' ? '#fff' : '#eb9b00'}
+    props.styletype === 'primary' ? '#fff' : '#eb9b00'};
   padding: 16px 32px;
   border: 2px solid #eb9b00;
   font-size: 20px;
   cursor: pointer;
-  color: ${(props: AbButtonProps) =>
-    props.styleType === 'primary'
+  ${(props: AbButtonProps) =>
+    props.styletype === 'primary'
       ? css`
           &:hover {
             background: #b87900;
@@ -31,15 +31,14 @@ const StyledButton = styled.button<AbButtonProps>`
             color #b87900;
           }
         `}
-  
 `;
 export function AbButton({
   text,
-  styleType = 'primary',
-  onCLick,
+  styletype = 'primary',
+  onClick,
 }: AbButtonProps) {
   return (
-    <StyledButton onClick={onCLick} styleType={styleType}>
+    <StyledButton onClick={onClick} styletype={styletype}>
       {text}
     </StyledButton>
   );
