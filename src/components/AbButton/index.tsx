@@ -16,6 +16,8 @@ const StyledButton = styled.button<AbButtonProps>`
   border: 2px solid #eb9b00;
   font-size: 20px;
   cursor: pointer;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
   ${(props: AbButtonProps) =>
     props.styletype === 'primary'
       ? css`
