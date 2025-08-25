@@ -17,4 +17,5 @@ export const Thing: FC<Props> = ({ children }) => {
 export * from './components/AbButton';
 export * from './components/Card';
 export * from './components/Tags';
-export * from './components/AbGrupoOpcoes';
+export * from './components/AbOptionsGroup';
+export * from './components/AbFieldText';
