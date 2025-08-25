@@ -59,7 +59,7 @@ const CardContainerImage = styled.div`
 export interface CardProps {
   children?: React.ReactNode;
 }
-function Card(children: CardProps) {
+function Card() {
   return (
     <>
       <CardContainer>
