@@ -10,9 +10,5 @@ export default {
 } as ComponentMeta<typeof Card>;
 
 export const CardComponent = () => {
-  return (
-    <Card>
-      <h1>Olá, eu sou um card</h1>
-    </Card>
-  );
+  return <Card></Card>;
 };

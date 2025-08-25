@@ -57,7 +57,7 @@ const CardContainerImage = styled.div`
   gap: 16px;
 `;
 export interface CardProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 function Card(children: CardProps) {
   return (
