@@ -1,16 +1,37 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { AbGrupoOpcoes } from '../src';
+import { AbOptionGroup, AbOptionsProps } from '../src';
 
 export default {
-  title: 'Components/AbGrupoOpcoes',
-  component: AbGrupoOpcoes,
-} as ComponentMeta<typeof AbGrupoOpcoes>;
+  title: 'Components/AbOptionGroup',
+  component: AbOptionGroup,
+} as ComponentMeta<typeof AbOptionGroup>;
 
-const Template: ComponentStory<typeof AbGrupoOpcoes> = args => (
-  <AbGrupoOpcoes />
+const Template: ComponentStory<typeof AbOptionGroup> = args => (
+  <AbOptionGroup {...args} />
 );
 
 export const Default = Template.bind({});
 
-Default.args = {};
+Default.args = {
+  options: [
+    {
+      id: 1,
+      title: 'E-book',
+      price: 'R$ 19,90',
+      footer: '.pdf, .epub, .mob',
+    },
+    {
+      id: 2,
+      title: 'Impresso',
+      price: 'R$ 19,90',
+      footer: '.pdf, .epub, .mob',
+    },
+    {
+      id: 3,
+      title: 'Impresso + E-book',
+      price: 'R$ 19,90',
+      footer: '.pdf, .epub, .mob',
+    },
+  ],
+} as AbOptionsProps;
